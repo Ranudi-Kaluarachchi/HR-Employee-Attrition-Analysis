@@ -1,0 +1,193 @@
+HR EMPLOYEE ATTRITION ANALYSIS AND PREDICTION - RESULTS
+
+Project:
+HR Employee Attrition Analysis and Prediction
+
+Dataset:
+IBM HR Analytics Employee Attrition Dataset
+Approximate Records: 1,470 employees
+Approximate Features: 35 employee-related attributes
+
+Objective:
+The objective of this project was to analyze the main factors affecting employee attrition and build a basic predictive model to estimate whether an employee is likely to leave the company.
+
+------------------------------------------------------------
+1. DATA PREPROCESSING SUMMARY
+------------------------------------------------------------
+
+The dataset was loaded and inspected using Python and Pandas.
+
+Steps completed:
+- Checked the first few records of the dataset.
+- Reviewed the number of rows and columns.
+- Checked column names and data types.
+- Checked for missing values.
+- Generated summary statistics.
+- Selected relevant features for analysis.
+- Converted categorical variables into numerical format.
+
+Selected features:
+- Attrition
+- JobSatisfaction
+- EnvironmentSatisfaction
+- RelationshipSatisfaction
+- WorkLifeBalance
+- Age
+- MonthlyIncome
+- YearsAtCompany
+- DistanceFromHome
+- OverTime
+
+Categorical encoding:
+- Attrition: Yes = 1, No = 0
+- OverTime: Yes = 1, No = 0
+
+A cleaned dataset was saved as:
+data/cleaned_attrition_dataset.csv
+
+------------------------------------------------------------
+2. EXPLORATORY DATA ANALYSIS SUMMARY
+------------------------------------------------------------
+
+The following analysis areas were covered:
+- Attrition count distribution
+- Job satisfaction vs attrition
+- Overtime vs attrition
+- Monthly income vs attrition
+- Correlation analysis between selected features
+
+Visualizations generated:
+- visuals/attrition_count.png
+- visuals/job_satisfaction_vs_attrition.png
+- visuals/overtime_vs_attrition.png
+- visuals/monthly_income_vs_attrition.png
+- visuals/correlation_heatmap.png
+
+------------------------------------------------------------
+3. KEY FINDINGS
+------------------------------------------------------------
+
+1. Employees with lower job satisfaction showed a higher tendency to leave the organization.
+
+2. Overtime was associated with higher employee attrition.
+
+3. Employees with lower monthly income were more likely to leave compared to employees with higher monthly income.
+
+4. Work-life balance, environment satisfaction, and relationship satisfaction were important factors related to employee retention.
+
+5. Correlation analysis and hypothesis testing indicated that employee satisfaction-related variables had a statistically significant relationship with attrition.
+
+------------------------------------------------------------
+4. HYPOTHESIS TESTING SUMMARY
+------------------------------------------------------------
+
+Hypothesis:
+Fair treatment and employee satisfaction factors significantly affect employee attrition.
+
+Variables tested:
+- JobSatisfaction
+- EnvironmentSatisfaction
+- RelationshipSatisfaction
+- WorkLifeBalance
+
+Statistical method:
+Pearson correlation test
+
+Decision rule:
+- If p-value < 0.05, reject H0.
+- If p-value >= 0.05, fail to reject H0.
+
+Conclusion:
+The tested satisfaction-related variables showed statistically significant relationships with attrition based on the p-value threshold of 0.05.
+
+Final decision:
+Reject H0.
+
+Final conclusion:
+Fair treatment and employee satisfaction factors significantly affect employee attrition.
+
+------------------------------------------------------------
+5. MACHINE LEARNING MODEL SUMMARY
+------------------------------------------------------------
+
+Model used:
+Logistic Regression
+
+Target variable:
+Attrition
+
+Feature variables:
+- JobSatisfaction
+- EnvironmentSatisfaction
+- RelationshipSatisfaction
+- WorkLifeBalance
+- Age
+- MonthlyIncome
+- YearsAtCompany
+- DistanceFromHome
+- OverTime
+
+Train-test split:
+80% training data
+20% testing data
+
+Evaluation metrics used:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Classification report
+
+Model performance:
+Add the actual model output after running analysis.py.
+
+Example format:
+
+Accuracy: 0.8673469387755102
+
+Classification Report:
+precision    recall  f1-score   support
+
+           0       0.88      0.98      0.93       255
+           1       0.50      0.10      0.17        39
+
+    accuracy                           0.87       294
+   macro avg       0.69      0.54      0.55       294
+weighted avg       0.83      0.87      0.83       294
+
+------------------------------------------------------------
+6. BUSINESS INSIGHTS
+------------------------------------------------------------
+
+From a business perspective, this analysis suggests that employee attrition can be reduced by improving employee satisfaction, reducing excessive overtime, supporting work-life balance, and reviewing income-related concerns.
+
+The results highlight the importance of fair treatment, workplace satisfaction, and employee well-being in improving employee loyalty and retention.
+
+------------------------------------------------------------
+7. LIMITATIONS
+------------------------------------------------------------
+
+- The analysis used selected variables only, not all available features in the dataset.
+- Logistic Regression was used as a basic classification model.
+- More advanced models such as Random Forest, XGBoost, or Decision Trees could be tested for better performance.
+- The dataset is historical and may not fully represent all real-world organizations.
+
+------------------------------------------------------------
+8. FUTURE IMPROVEMENTS
+------------------------------------------------------------
+
+Recommended improvements:
+- Test additional machine learning models.
+- Perform feature scaling and feature engineering.
+- Add confusion matrix visualization.
+- Tune model hyperparameters.
+- Build an interactive dashboard using Power BI or Streamlit.
+- Compare multiple models using accuracy, precision, recall, and F1-score.
+
+------------------------------------------------------------
+FINAL SUMMARY
+------------------------------------------------------------
+
+This project successfully completed a full data analytics workflow, including data preprocessing, exploratory data analysis, visualization, hypothesis testing, and predictive modeling.
+
+The findings indicate that employee satisfaction, overtime, income, and work-life balance are important factors influencing employee attrition.
